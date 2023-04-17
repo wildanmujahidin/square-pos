@@ -119,7 +119,7 @@ export const Customer = () => {
     <Layout>
       <header className="border-b-2 w-full">
         <p className="font-bold text-2xl mb-2">Customer</p>
-        <div className="flex justify-between">
+        <div className="sm:flex-none  xl:flex justify-between">
           <p
             className="text-[#98949E] font-medium"
             style={{ fontFamily: "Satoshi" }}
@@ -127,19 +127,19 @@ export const Customer = () => {
             You can manage and organize your customer and other things here
           </p>
           <div className="">
-            <button className="px-16 py-3 text-[#5D5FEF] normal-case border-b-4 border-[#5D5FEF] hover:bg-slate-300">
+            <button className="px-6 py-3 md:px-16 text-[#5D5FEF] normal-case border-b-4 border-[#5D5FEF] hover:bg-slate-300 sm:w-1/3 sm:px-0">
               Customer
             </button>
-            <button className="px-16 py-3 text-[#98949E] normal-case hover:bg-slate-300">
+            <button className="px-6 py-3 md:px-16 text-[#98949E] normal-case hover:bg-slate-300 sm:w-1/3 sm:px-0">
               Promo
             </button>
-            <button className="px-16 py-3 text-[#98949E] normal-case hover:bg-slate-300">
+            <button className="px-6 py-3 md:px-16 text-[#98949E] normal-case hover:bg-slate-300 sm:w-1/3 sm:px-0">
               Voucher
             </button>
           </div>
         </div>
       </header>
-      <main className="flex w-full h-full mt-4">
+      <main className="sm:flex-none xl:flex w-full h-full mt-4">
         <div className="w-full">
           <div className="bg-[#5D5FEF] rounded-lg p-3 text-white mr-4 relative">
             <p className="text-xl font-bold">Customer</p>
@@ -150,7 +150,7 @@ export const Customer = () => {
               On this menu you will be able to create, edit, and also delete the
               customer. Also you can manage it easily.
             </p>
-            <div className="flex gap-3">
+            <div className="flex gap-3 flex-wrap sm:flex-wrap xl:flex-nowrap">
               <ButtonTrans
                 id="add-button"
                 label="Add New Customer"
@@ -198,11 +198,10 @@ export const Customer = () => {
                 id="Refresh"
                 buttonSet="bg-opacity-20 z-10 backdrop-blur-sm"
                 icon={Printer}
-                // iconSet="mr-2"
               />
             </div>
             <div
-              className="h-full w-1/2 absolute right-0 top-0 z-0 bg-left rounded-r-lg"
+              className="h-full w-1/2 absolute right-0 top-0 z-0 bg-left rounded-r-lg bg-cover"
               style={{
                 backgroundImage: `url(${UnsplashHeader})`,
               }}
@@ -307,9 +306,9 @@ export const Customer = () => {
           </div>
           <div>{}</div>
         </div>
-        <div className="h-full w-[16.4rem]">
+        <div className="h-full   xl:w-[16.4rem]">
           <div
-            className="h-[16.5625rem] text-white p-4 rounded-lg flex flex-col justify-between font-semibold text-xl"
+            className="h-[16.5625rem] text-white p-4 rounded-lg flex flex-col justify-between font-semibold text-xl bg-cover"
             style={{
               backgroundImage: `url(${Frame2960})`,
             }}
@@ -320,7 +319,7 @@ export const Customer = () => {
             </button>
           </div>
           <div
-            className="h-[37.1875rem] my-4 p-4 text-xs font-semibold text-[#98949E]"
+            className="h-[37.1875rem] my-4 p-4 text-xs font-semibold text-[#98949E] rounded-lg"
             style={{
               backgroundImage: `url(${Frame2959})`,
             }}

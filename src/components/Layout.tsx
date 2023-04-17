@@ -21,6 +21,7 @@ import Reserve from "../assets/reserve.svg";
 import UserSquare from "../assets/user-square.svg";
 import ShoppingCart from "../assets/shopping-cart.svg";
 import Truck from "../assets/truck.svg";
+import { FiMenu } from "react-icons/fi";
 import { Button } from "react-daisyui";
 
 interface LayoutProps {
@@ -28,11 +29,13 @@ interface LayoutProps {
 }
 
 export const Layout: FC<LayoutProps> = ({ children }) => {
-  const { collapseSidebar } = useProSidebar();
+  const { collapseSidebar, toggleSidebar, broken } = useProSidebar();
   return (
     <div className="w-full h-screen  flex flex-col overflow-auto ">
       <div className="h-full w-full overflow-auto flex ">
         <Sidebar
+          breakPoint="md"
+          collapsedWidth="4.5rem"
           width="12.8rem"
           rootStyles={{
             [`.${sidebarClasses.container}`]: {
@@ -157,9 +160,19 @@ export const Layout: FC<LayoutProps> = ({ children }) => {
             </Button>
           </div>
         </Sidebar>
-        <div className="flex flex-col p-6 h-full w-full overflow-auto">
-          {children}
-        </div>
+        <main className="h-full w-full overflow-auto">
+          {broken && (
+            <div className="w-full bg-slate-50 sticky top-0 z-50">
+              <button
+                className="btn btn-ghost rounded"
+                onClick={() => toggleSidebar()}
+              >
+                <FiMenu size={30} />
+              </button>
+            </div>
+          )}
+          <div className="p-6">{children}</div>
+        </main>
       </div>
     </div>
   );
