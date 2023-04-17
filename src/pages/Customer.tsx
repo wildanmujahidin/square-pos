@@ -154,11 +154,11 @@ export const Customer = () => {
               <ButtonTrans
                 id="add-button"
                 label="Add New Customer"
-                buttonSet="bg-opacity-20"
+                buttonSet="bg-opacity-20 z-50"
                 iconString={"+"}
                 iconStringSet="mr-4"
               />
-              <div className="form-control w-full z-10">
+              <div className="form-control w-full z-50">
                 <form>
                   <div className="relative">
                     <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none text-[#D1D0D3]">
@@ -183,20 +183,20 @@ export const Customer = () => {
               <ButtonTrans
                 id="Filter"
                 label="Filter"
-                buttonSet="bg-opacity-20 z-10 backdrop-blur-sm"
+                buttonSet="bg-opacity-20 z-50 backdrop-blur-sm"
                 icon={Filter}
                 iconSet="mr-2"
               />
               <ButtonTrans
                 id="Refresh"
                 label="Refresh"
-                buttonSet="bg-opacity-20 z-10 backdrop-blur-sm"
+                buttonSet="bg-opacity-20 z-50 backdrop-blur-sm"
                 icon={Refresh2}
                 iconSet="mr-2"
               />
               <ButtonTrans
                 id="Refresh"
-                buttonSet="bg-opacity-20 z-10 backdrop-blur-sm"
+                buttonSet="bg-opacity-20 z-50 backdrop-blur-sm"
                 icon={Printer}
               />
             </div>
